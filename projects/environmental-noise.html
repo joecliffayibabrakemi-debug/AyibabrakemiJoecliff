@@ -1,0 +1,924 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Environmental Noise Pollution Research | Joecliff Wilson</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f9f9;
+            color: #263238;
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            background: #074344;
+            color: white;
+            padding: 20px 8%;
+        }
+
+        .nav {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .back-home {
+            text-decoration: none;
+            font-size: 14px;
+            border: 1px solid rgba(255,255,255,0.5);
+            padding: 9px 16px;
+            border-radius: 5px;
+        }
+
+        .back-home:hover {
+            background: white;
+            color: #074344;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            max-width: 1000px;
+            margin: auto;
+            padding: 80px 8% 60px;
+        }
+
+        .category {
+            color: #087f80;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            color: #163c3d;
+        }
+
+        .hero p {
+            max-width: 800px;
+            font-size: 18px;
+            color: #596969;
+        }
+
+        /* =========================
+           MAIN CONTENT
+        ========================= */
+
+        main {
+            max-width: 1000px;
+            margin: auto;
+            padding: 0 8% 80px;
+        }
+
+        section {
+            background: white;
+            padding: 35px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        section h2 {
+            color: #074344;
+            margin-bottom: 18px;
+            font-size: 27px;
+        }
+
+        section h3 {
+            color: #163c3d;
+            margin: 22px 0 10px;
+        }
+
+        section p {
+            margin-bottom: 14px;
+        }
+
+        ul {
+            padding-left: 22px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* =========================
+           PROJECT IMAGE
+        ========================= */
+
+        .project-image {
+            width: 100%;
+            border-radius: 8px;
+            margin: 15px 0 10px;
+            display: block;
+        }
+
+        .image-caption {
+            font-size: 13px;
+            color: #777;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        /* =========================
+           PROJECT STATS
+        ========================= */
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .stat {
+            background: #f1f6f6;
+            padding: 22px;
+            border-radius: 8px;
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 25px;
+            color: #074344;
+            margin-bottom: 5px;
+        }
+
+        .stat span {
+            font-size: 14px;
+            color: #667;
+        }
+
+        /* =========================
+           PROCESS
+        ========================= */
+
+        .process {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        .process-step {
+            text-align: center;
+            background: #f1f6f6;
+            padding: 18px 10px;
+            border-radius: 7px;
+            font-size: 13px;
+            font-weight: bold;
+            color: #074344;
+        }
+
+        /* =========================
+           RESULTS TABLE
+        ========================= */
+
+        .table-wrapper {
+            overflow-x: auto;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 13px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background: #074344;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #f7f9f9;
+        }
+
+        /* =========================
+           FINDING CARDS
+        ========================= */
+
+        .finding-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .finding {
+            background: #f1f6f6;
+            padding: 20px;
+            border-left: 4px solid #087f80;
+            border-radius: 5px;
+        }
+
+        .finding strong {
+            color: #074344;
+        }
+
+        /* =========================
+           TOOLS
+        ========================= */
+
+        .tools {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .tool {
+            background: #e8eeee;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            color: #074344;
+        }
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #074344;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .button:hover {
+            background: #0a5a5b;
+        }
+
+        .button.secondary {
+            background: transparent;
+            color: #074344;
+            border: 1px solid #074344;
+        }
+
+        .button.secondary:hover {
+            background: #074344;
+            color: white;
+        }
+
+        /* =========================
+           PROJECT NAVIGATION
+        ========================= */
+
+        .project-navigation {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        .project-navigation a {
+            text-decoration: none;
+            color: #074344;
+            font-weight: bold;
+        }
+
+        .project-navigation a:hover {
+            text-decoration: underline;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #074344;
+            color: white;
+            text-align: center;
+            padding: 30px 8%;
+            font-size: 14px;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 750px) {
+
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            .hero {
+                padding-top: 55px;
+            }
+
+            section {
+                padding: 25px;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .process {
+                grid-template-columns: 1fr;
+            }
+
+            .finding-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-navigation {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER / NAVIGATION
+    ========================= -->
+
+    <header>
+        <div class="nav">
+
+            <div class="logo">
+                Joecliff Wilson
+            </div>
+
+            <!-- BACK TO MAIN PORTFOLIO -->
+            <a href="../index.html" class="back-home">
+                ← Back to Portfolio
+            </a>
+
+        </div>
+    </header>
+
+
+    <!-- =========================
+         HERO SECTION
+    ========================= -->
+
+    <div class="hero">
+
+        <div class="category">
+            ACADEMIC RESEARCH • PHYSICS
+        </div>
+
+        <h1>
+            Environmental Noise Pollution Research
+        </h1>
+
+        <p>
+            An undergraduate research project assessing environmental noise
+            levels in selected markets in Yenagoa and its environs using
+            field measurements, quantitative analysis and spatial mapping.
+        </p>
+
+    </div>
+
+
+    <main>
+
+
+        <!-- =========================
+             PROJECT OVERVIEW
+        ========================= -->
+
+        <section>
+
+            <h2>Project Overview</h2>
+
+            <p>
+                This was my undergraduate research project completed as part
+                of my B.Sc. Physics programme at Federal University Otuoke,
+                Bayelsa State, Nigeria.
+            </p>
+
+            <p>
+                The study assessed environmental noise levels in five selected
+                markets and examined the level of noise pollution recorded at
+                the different locations.
+            </p>
+
+            <div class="stats">
+
+                <div class="stat">
+                    <strong>5</strong>
+                    <span>Market locations studied</span>
+                </div>
+
+                <div class="stat">
+                    <strong>75.62–89.02 dB</strong>
+                    <span>Noise Pollution Level range</span>
+                </div>
+
+                <div class="stat">
+                    <strong>11 AM–3 PM</strong>
+                    <span>Measurement period</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             RESEARCH OBJECTIVE
+        ========================= -->
+
+        <section>
+
+            <h2>Research Objective</h2>
+
+            <p>
+                The study was designed to understand the level of environmental
+                noise associated with activities within the selected market
+                environments.
+            </p>
+
+            <ul>
+                <li>Measure the equivalent noise levels at the selected markets.</li>
+                <li>Assess the level of noise pollution resulting from market activities.</li>
+                <li>Identify possible sources of noise within the selected environments.</li>
+                <li>Examine possible effects of environmental noise on health and quality of life.</li>
+            </ul>
+
+        </section>
+
+
+        <!-- =========================
+             DATA COLLECTION
+        ========================= -->
+
+        <section>
+
+            <h2>Data Collection</h2>
+
+            <p>
+                Noise measurements were collected directly from five selected
+                market locations. A TES-1350A sound level meter was used to
+                obtain the noise measurements, while GPS was used to obtain
+                location information for the selected sites.
+            </p>
+
+            <h3>Study Locations</h3>
+
+            <ul>
+                <li>Mbiama Market</li>
+                <li>Opolo Market</li>
+                <li>Swali Market — Foodstuff Section</li>
+                <li>Swali Market — Electrical Parts</li>
+                <li>Otuoke Market</li>
+            </ul>
+
+            <!--
+                ================================
+                ADD YOUR RESEARCH / FIELD PHOTO HERE
+                ================================
+
+                If you have a photo of the sound level meter,
+                market measurement process, or field work:
+
+                1. Put the image inside your "images" folder.
+                2. Rename it, for example:
+
+                   noise-fieldwork.jpg
+
+                3. Replace the line below with:
+
+                <img src="../images/noise-fieldwork.jpg"
+                     alt="Field measurement during environmental noise research"
+                     class="project-image">
+
+                ================================
+            -->
+
+        </section>
+
+
+        <!-- =========================
+             METHODOLOGY
+        ========================= -->
+
+        <section>
+
+            <h2>Methodology</h2>
+
+            <p>
+                The research combined experimental measurements with
+                computational analysis of the recorded results.
+            </p>
+
+            <p>
+                The Noise Pollution Level (Lnp) was calculated using the
+                relationship:
+            </p>
+
+            <div class="finding">
+                <strong>Lnp = Leq + Kσ</strong>
+
+                <p>
+                    Where Leq represents the equivalent sound level,
+                    K = 2.56, and σ represents the standard deviation
+                    of the acquired Leq values.
+                </p>
+            </div>
+
+            <p>
+                Golden Software Surfer was also used for map analysis and
+                spatial representation of the research results.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             RESEARCH PROCESS
+        ========================= -->
+
+        <section>
+
+            <h2>Research Process</h2>
+
+            <div class="process">
+
+                <div class="process-step">
+                    Field<br>Measurement
+                </div>
+
+                <div class="process-step">
+                    Location<br>Data
+                </div>
+
+                <div class="process-step">
+                    Data<br>Processing
+                </div>
+
+                <div class="process-step">
+                    Quantitative<br>Analysis
+                </div>
+
+                <div class="process-step">
+                    Mapping &<br>Interpretation
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             RESULTS
+        ========================= -->
+
+        <section>
+
+            <h2>Research Results</h2>
+
+            <p>
+                The recorded results showed differences in noise levels across
+                the five selected market locations.
+            </p>
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Market</th>
+                            <th>Leq (dBA)</th>
+                            <th>Lnp (dB)</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Mbiama Market</td>
+                            <td>75.50</td>
+                            <td>89.02</td>
+                        </tr>
+
+                        <tr>
+                            <td>Opolo Market</td>
+                            <td>67.80</td>
+                            <td>81.32</td>
+                        </tr>
+
+                        <tr>
+                            <td>Swali Market — Foodstuff</td>
+                            <td>65.10</td>
+                            <td>78.62</td>
+                        </tr>
+
+                        <tr>
+                            <td>Swali Market — Electrical Parts</td>
+                            <td>70.90</td>
+                            <td>84.42</td>
+                        </tr>
+
+                        <tr>
+                            <td>Otuoke Market</td>
+                            <td>61.80</td>
+                            <td>75.62</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             VISUALIZATION
+        ========================= -->
+
+        <section>
+
+            <h2>Data Visualization & Mapping</h2>
+
+            <p>
+                The research used computational analysis and Surfer to support
+                the interpretation and spatial representation of the recorded
+                noise levels.
+            </p>
+
+            <!--
+                =========================================
+                ADD YOUR SURFER MAP / RESEARCH GRAPH HERE
+                =========================================
+
+                Put your image inside:
+
+                images/
+
+                Example filename:
+
+                noise-map.jpg
+
+                Then replace the placeholder below with:
+
+                <img src="../images/noise-map.jpg"
+                     alt="Environmental noise pollution map"
+                     class="project-image">
+
+                =========================================
+            -->
+             <img src="../images/chart.png"
+                     alt="Environmental noise pollution map"
+                     class="project-image">
+
+            <p class="image-caption">
+                Research visualization / spatial mapping can be added here.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             KEY FINDINGS
+        ========================= -->
+
+        <section>
+
+            <h2>Key Findings</h2>
+
+            <div class="finding-grid">
+
+                <div class="finding">
+                    <strong>Highest Lnp</strong>
+                    <p>
+                        Mbiama Market recorded the highest Noise Pollution
+                        Level at 89.02 dB.
+                    </p>
+                </div>
+
+                <div class="finding">
+                    <strong>Lowest Lnp</strong>
+                    <p>
+                        Otuoke Market recorded the lowest Noise Pollution
+                        Level at 75.62 dB.
+                    </p>
+                </div>
+
+                <div class="finding">
+                    <strong>Variation Across Locations</strong>
+                    <p>
+                        Noise Pollution Levels varied considerably across
+                        the five selected market environments.
+                    </p>
+                </div>
+
+                <div class="finding">
+                    <strong>Possible Contributors</strong>
+                    <p>
+                        Traffic, market activities, crowding and proximity
+                        to roads were identified as possible contributors.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             RECOMMENDATIONS
+        ========================= -->
+
+        <section>
+
+            <h2>Recommendations</h2>
+
+            <p>
+                Based on the findings of the research, the study recommended
+                several measures for reducing exposure to elevated
+                environmental noise.
+            </p>
+
+            <ul>
+                <li>Regular maintenance of equipment.</li>
+                <li>Use of noise barriers where appropriate.</li>
+                <li>Use of quieter equipment.</li>
+                <li>Increased awareness of noise pollution.</li>
+                <li>Use of hearing protection where necessary.</li>
+                <li>Health checks for people exposed to elevated noise levels.</li>
+            </ul>
+
+        </section>
+
+
+        <!-- =========================
+             TOOLS
+        ========================= -->
+
+        <section>
+
+            <h2>Tools & Methods Used</h2>
+
+            <div class="tools">
+
+                <span class="tool">TES-1350A Sound Level Meter</span>
+                <span class="tool">GPS</span>
+                <span class="tool">Microsoft Excel</span>
+                <span class="tool">Golden Software Surfer</span>
+                <span class="tool">Python</span>
+                <span class="tool">Quantitative Analysis</span>
+                <span class="tool">Data Visualization</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ACADEMIC CONTEXT
+        ========================= -->
+
+        <section>
+
+            <h2>Academic Context</h2>
+
+            <p>
+                <strong>Programme:</strong> B.Sc. Physics
+            </p>
+
+            <p>
+                <strong>Institution:</strong> Federal University Otuoke,
+                Bayelsa State, Nigeria
+            </p>
+
+            <p>
+                <strong>Department:</strong> Department of Physics
+            </p>
+
+            <p>
+                <strong>Year:</strong> 2025
+            </p>
+
+            <p>
+                <strong>Researcher:</strong> Joecliff Ayibabrakemi Wilson
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             PROJECT FILES
+        ========================= -->
+
+        <section>
+
+            <h2>Research Document</h2>
+
+            <p>
+                The complete undergraduate research project and supporting
+                materials are available in the project's GitHub repository.
+            </p>
+
+            <div class="buttons">
+
+                <!-- GITHUB REPOSITORY -->
+                <a
+                    href="https://github.com/joecliffayibabrakemi-debug/Environmental-Noise-Pollution-Research-Project"
+                    target="_blank"
+                    class="button">
+                    View Research on GitHub →
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PROJECT NAVIGATION
+        ========================= -->
+
+        <div class="project-navigation">
+
+            <!-- PREVIOUS PROJECT -->
+            <a href="apexlink.html">
+                ← ApexLink Supply Chain
+            </a>
+
+            <!-- BACK TO MAIN PORTFOLIO -->
+            <a href="../index.html">
+                Back to Projects
+            </a>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Joecliff Ayibabrakemi Wilson. All rights reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>
+```

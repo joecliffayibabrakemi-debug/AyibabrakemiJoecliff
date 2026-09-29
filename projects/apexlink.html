@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ApexLink Supply Chain Analysis | Joecliff A. Wilson</title>
+
+    <meta name="description" content="ApexLink Supply Chain Analysis project by Joecliff A. Wilson.">
+
+    <style>
+
+        /* =====================================================
+           BASIC SETTINGS
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --green: #074344;
+            --green-light: #0d5555;
+            --gold: #d7a84f;
+            --background: #f7f8f6;
+            --white: #ffffff;
+            --text: #17201e;
+            --muted: #68736f;
+            --border: #dfe5e2;
+            --max-width: 1100px;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        /* =====================================================
+           NAVIGATION
+        ===================================================== */
+
+        nav {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 20px 6%;
+        }
+
+        .logo {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--green);
+        }
+
+        .back-link {
+            color: var(--green);
+            font-weight: 600;
+        }
+
+        .back-link:hover {
+            color: var(--gold);
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .project-hero {
+            max-width: var(--max-width);
+            margin: auto;
+            padding: 90px 25px 60px;
+        }
+
+        .project-category {
+            color: var(--gold);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .project-hero h1 {
+            font-size: 3.8rem;
+            line-height: 1.1;
+            color: var(--green);
+            max-width: 850px;
+            margin-bottom: 25px;
+        }
+
+        .project-intro {
+            font-size: 1.2rem;
+            color: var(--muted);
+            max-width: 780px;
+        }
+
+
+        /* =====================================================
+           MAIN CONTENT
+        ===================================================== */
+
+        .container {
+            max-width: var(--max-width);
+            margin: auto;
+            padding: 0 25px 90px;
+        }
+
+        section {
+            margin-bottom: 80px;
+        }
+
+        .section-label {
+            color: var(--gold);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: var(--green);
+            font-size: 2.1rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 18px;
+        }
+
+
+        /* =====================================================
+           PROJECT IMAGE
+        ===================================================== */
+
+        .main-project-image {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            margin: 30px 0 80px;
+        }
+
+        .main-project-image img {
+            width: 100%;
+        }
+
+        .image-caption {
+            padding: 15px 20px;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+
+        /* =====================================================
+           OVERVIEW
+        ===================================================== */
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .overview-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 25px;
+        }
+
+        .overview-card h3 {
+            color: var(--green);
+            margin-bottom: 10px;
+        }
+
+        .overview-card p {
+            margin-bottom: 0;
+            color: var(--muted);
+        }
+
+
+        /* =====================================================
+           BUSINESS QUESTIONS
+        ===================================================== */
+
+        .question-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .question {
+            background: var(--white);
+            border-left: 4px solid var(--gold);
+            padding: 20px;
+        }
+
+
+        /* =====================================================
+           PROCESS
+        ===================================================== */
+
+        .process {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .process-step {
+            background: var(--green);
+            color: var(--white);
+            padding: 22px 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .process-number {
+            display: block;
+            color: var(--gold);
+            font-size: 0.8rem;
+            margin-bottom: 8px;
+        }
+
+
+        /* =====================================================
+           DASHBOARD
+        ===================================================== */
+
+        .dashboard-box {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        .dashboard-box img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .dashboard-note {
+            color: var(--muted);
+            font-size: 0.9rem;
+            margin-top: 15px;
+        }
+
+
+        /* =====================================================
+           KEY FINDINGS
+        ===================================================== */
+
+        .findings-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .finding {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 25px;
+        }
+
+        .finding-number {
+            color: var(--green);
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .finding-title {
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .finding p {
+            color: var(--muted);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+
+        /* =====================================================
+           RECOMMENDATIONS
+        ===================================================== */
+
+        .recommendations {
+            display: grid;
+            gap: 15px;
+        }
+
+        .recommendation {
+            background: var(--white);
+            border: 1px solid var(--border);
+            padding: 22px;
+            border-radius: 10px;
+        }
+
+        .recommendation strong {
+            color: var(--green);
+        }
+
+
+        /* =====================================================
+           TOOLS
+        ===================================================== */
+
+        .tools {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tool {
+            background: var(--green);
+            color: var(--white);
+            padding: 9px 15px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+        }
+
+
+        /* =====================================================
+           PROJECT LINKS
+        ===================================================== */
+
+        .project-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .button {
+            display: inline-block;
+            background: var(--green);
+            color: var(--white);
+            padding: 13px 22px;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        .button:hover {
+            background: var(--green-light);
+        }
+
+        .button.secondary {
+            background: transparent;
+            color: var(--green);
+            border: 1px solid var(--green);
+        }
+
+        .button.secondary:hover {
+            background: var(--green);
+            color: var(--white);
+        }
+
+
+        /* =====================================================
+           PROJECT NAVIGATION
+        ===================================================== */
+
+        .project-navigation {
+            border-top: 1px solid var(--border);
+            padding-top: 30px;
+
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .project-navigation a {
+            color: var(--green);
+            font-weight: 700;
+        }
+
+        .project-navigation a:hover {
+            color: var(--gold);
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            background: var(--green);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 800px) {
+
+            .project-hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .overview-grid,
+            .question-list {
+                grid-template-columns: 1fr;
+            }
+
+            .process {
+                grid-template-columns: 1fr;
+            }
+
+            .findings-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            nav {
+                padding: 18px 22px;
+            }
+
+            .project-hero {
+                padding: 65px 22px 45px;
+            }
+
+            .project-hero h1 {
+                font-size: 2.3rem;
+            }
+
+            .project-intro {
+                font-size: 1rem;
+            }
+
+            .container {
+                padding: 0 22px 60px;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .findings-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-navigation {
+                flex-direction: column;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVIGATION
+    ===================================================== -->
+
+    <nav>
+
+        <a href="../index.html" class="logo">
+            Joecliff A. Wilson
+        </a>
+
+        <a href="../index.html" class="back-link">
+            ← Back to Portfolio
+        </a>
+
+    </nav>
+
+
+
+    <!-- =====================================================
+         PROJECT HERO
+    ===================================================== -->
+
+    <header class="project-hero">
+
+        <div class="project-category">
+            SUPPLY CHAIN ANALYTICS
+        </div>
+
+        <h1>
+            ApexLink Supply Chain Analysis
+        </h1>
+
+        <p class="project-intro">
+            Analysing sales, supplier performance, delivery delays
+            and operational issues to identify where supply-chain
+            performance requires attention.
+        </p>
+
+    </header>
+
+
+
+    <main class="container">
+
+
+        <!-- =================================================
+             MAIN PROJECT IMAGE
+
+             CURRENTLY USING Supply.jpg
+
+             Later, you can replace it with:
+             apexlink-dashboard.jpg
+        ================================================== -->
+
+        <div class="main-project-image">
+
+            <img
+                src="../images/Supply.jpg"
+                alt="ApexLink Supply Chain Analysis Dashboard"
+            >
+
+            <div class="image-caption">
+                ApexLink Supply Chain Analysis dashboard.
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             PROJECT OVERVIEW
+        ================================================== -->
+
+        <section>
+
+            <div class="section-label">
+                PROJECT OVERVIEW
+            </div>
+
+            <h2>
+                Understanding supply-chain performance
+            </h2>
+
+            <p>
+                This project analyses a fictional supply-chain
+                dataset containing 500 orders to understand sales,
+                supplier performance, delivery delays, cancellations
+                and returns.
+            </p>
+
+            <p>
+                The analysis was designed to move beyond reporting
+                sales figures and identify operational patterns
+                that could affect delivery performance, supplier
+                management and inventory decisions.
+            </p>
+
+
+            <div class="overview-grid">
+
+                <div class="overview-card">
+
+                    <h3>
+                        Orders Analysed
+                    </h3>
+
+                    <p>
+                        500 orders.
+                    </p>
+
+                </div>
+
+
+                <div class="overview-card">
+
+                    <h3>
+                        Sales
+                    </h3>
+
+                    <p>
+                        Approximately ₦62.95 billion in recorded
+                        sales.
+                    </p>
+
+                </div>
+
+
+                <div class="overview-card">
+
+                    <h3>
+                        Main Focus
+                    </h3>
+
+                    <p>
+                        Delivery performance, suppliers, products,
+                        cancellations and returns.
+                    </p>
+
+                </div>
+
+
+                <div class="overview-card">
+
+                    <h3>
+                        Tools
+                    </h3>
+
+                    <p>
+                        Excel, SQL and Power BI.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             BUSINESS QUESTIONS
+        ================================================== -->
+
+        <section>
+
+            <div class="section-label">
+                ANALYSIS QUESTIONS
+            </div>
+
+            <h2>
+                What did the analysis try to answer?
+            </h2>
+
+            <div class="question-list">
+
+                <div class="question">
+                    Where are delivery delays concentrated?
+                </div>
+
+                <div class="question">
+                    Which suppliers and routes show operational concerns?
+                </div>
+
+                <div class="question">
+                    Which products contribute most to sales?
+                </div>
+
+                <div class="question">
+                    How significant are cancellations and returns?
+                </div>
+
+                <div class="question">
+                    Where is supplier information incomplete or unknown?
+                </div>
+
+                <div class="question">
+                    Which regions contribute most to revenue?
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             DATA PREPARATION
+        ================================================== -->
+
+        <section>
+
+            <div class="section-label">
+                DATA PREPARATION
+            </div>
+
+            <h2>
+                Preparing the supply-chain data
+            </h2>
+
+            <p>
+                The raw operational data was reviewed, cleaned and
+                structured before analysis. This included checking
+                missing supplier information, standardising fields,
+                reviewing order status and preparing the data for
+                analysis in Power BI.
+            </p>
+
+            <p>
+                Data quality was treated as part of the analysis
+                rather than something separate from it, because
+                incomplete supplier information can affect how
+                operational performance is interpreted.
+            </p>
+
+            <!--
+                OPTIONAL IMAGE
+
+                Later you can add a screenshot of your
+                Excel / SQL data preparation here.
+
+                Example:
+
+                <img src="../images/apexlink-cleaning.jpg"
+                     alt="ApexLink data cleaning">
+            -->
+
+        </section>
+
+
+
+        <!-- =================================================
+             ANALYSIS PROCESS
+        ================================================== -->
+
+        <section>
+
+            <div class="section-label">
+                PROCESS
+            </div>
+
+            <h2>
+                From raw data to business insights
+            </h2>
+
+            <div class="process">
+
+                <div class="process-step">
+
+                    <span class="process-number">
+                        01
+                    </span>
+
+                    Raw Data
+
+                </div>
+
+
+                <div class="process-step">
+
+                    <span class="process-number">
+                        02
+                    </span>
+
+                    Data Cleaning
+
+                </div>
+
+
+                <div class="process-step">
+
+                    <span class="process-number">
+                        03
+                    </span>
+
+                    Analysis
+
+                </div>
+
+
+                <div class="process-step">
+
+                    <span class="process-number">
+                        04
+                    </span>
+
+                    Dashboard
+
+                </div>
+
+
+                <div class="process-step">
+
+                    <span class="process-number">
+                        05
+                    </span>
+
+                    Recommendations
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             DASHBOARD
+        ================================================== -->
+
+        <section>
+
+            <div class="section-label">
+                DASHBOARD
+            </div>
+
+            <h2>
+                Supply Chain Performance Dashboard
+            </h2>
+
+            <p>
+                The Power BI dashboard brings sales, delivery,
+                supplier and inventory-related metrics together
+                to provide a view of supply-chain performance.
+            </p>
+
+
+            <!--
+                =================================================
+                DASHBOARD IMAGE
+
+                Currently using Supply.jpg.
+
+                Later, take a screenshot of your actual
+                Power BI dashboard and save it as:
+
+                apexlink-dashboard.jpg
+
+                Put it inside the images folder.
+
+                Then change:
+
+                ../images/Supply.jpg
+
+                to:
+
+                ../images/apexlink-dashboard.jpg
+                =================================================
+            -->
+
+            <div class="dashboard-box">
+
+                <img
+                    src="../images/Supply.jpg"
+                    alt="ApexLink Power BI dashboard"
+                >
+
+                <p class="dashboard-note">
+                    Dashboard preview. Replace this image with
+                    your final ApexLink Power BI dashboard screenshot.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             KEY FINDINGS
+        ================================================== -->
+
+        <section>
+
+            <div class="section-label">
+                KEY FINDINGS
+            </div>
+
+            <h2>
+                What the analysis revealed
+            </h2>
+
+
+            <div class="findings-grid">
+
+
+                <div class="finding">
+
+                    <div class="finding-number">
+                        45.6%
+                    </div>
+
+                    <div class="finding-title">
+                        Late Deliveries
+                    </div>
+
+                    <p>
+                        Nearly half of the analysed orders were
+                        recorded as late deliveries.
+                    </p>
+
+                </div>
+
+
+                <div class="finding">
+
+                    <div class="finding-number">
+                        33 days
+                    </div>
+
+                    <div class="finding-title">
+                        Average Delivery Time
+                    </div>
+
+                    <p>
+                        The average delivery duration across
+                        the analysed orders.
+                    </p>
+
+                </div>
+
+
+                <div class="finding">
+
+                    <div class="finding-number">
+                        28.2%
+                    </div>
+
+                    <div class="finding-title">
+                        Cancelled / Returned
+                    </div>
+
+                    <p>
+                        141 of the 500 orders were cancelled
+                        or returned.
+                    </p>
+
+                </div>
+
+
+                <div class="finding">
+
+                    <div class="finding-number">
+                        ₦48.2B
+                    </div>
+
+                    <div class="finding-title">
+                        South-South Revenue
+                    </div>
+
+                    <p>
+                        South-South contributed the largest
+                        share of recorded regional revenue.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ADDITIONAL FINDINGS
+        ================================================== -->
+
+        <section>
+
+            <div class="section-label">
+                OPERATIONAL INSIGHTS
+            </div>
+
+            <h2>
+                Where the pressure points appeared
+            </h2>
+
+
+            <div class="recommendations">
+
+
+                <div class="recommendation">
+
+                    <strong>
+                        Delivery delays
+                    </strong>
+
+                    <p>
+                        The Port Harcourt + Dangote lane recorded
+                        an average delivery time of 35 days,
+                        indicating a route requiring closer
+                        operational review.
+                    </p>
+
+                </div>
+
+
+                <div class="recommendation">
+
+                    <strong>
+                        Supplier concentration
+                    </strong>
+
+                    <p>
+                        Dangote accounted for 72 of the 228 late
+                        orders and approximately 33.0% of recorded
+                        revenue.
+                    </p>
+
+                </div>
+
+
+                <div class="recommendation">
+
+                    <strong>
+                        Supplier data quality
+                    </strong>
+
+                    <p>
+                        Approximately ₦11 billion, or 17.5% of
+                        recorded supplier value, was associated
+                        with missing or unknown supplier information.
+                    </p>
+
+                </div>
+
+
+                <div class="recommendation">
+
+                    <strong>
+                        Product concentration
+                    </strong>
+
+                    <p>
+                        Laptop, Soap and Cement together accounted
+                        for approximately 76.8% of recorded revenue,
+                        highlighting a concentration of sales across
+                        a small group of products.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             RECOMMENDATIONS
+        ================================================== -->
+
+        <section>
+
+            <div class="section-label">
+                RECOMMENDATIONS
+            </div>
+
+            <h2>
+                What could the business investigate next?
+            </h2>
+
+
+            <div class="recommendations">
+
+
+                <div class="recommendation">
+
+                    <strong>
+                        01 — Investigate high-delay routes
+                    </strong>
+
+                    <p>
+                        Review routes with consistently longer
+                        delivery times to understand whether
+                        logistics, supplier or geographic factors
+                        are contributing to delays.
+                    </p>
+
+                </div>
+
+
+                <div class="recommendation">
+
+                    <strong>
+                        02 — Improve supplier data quality
+                    </strong>
+
+                    <p>
+                        Strengthen supplier data capture and
+                        validation so operational performance
+                        can be attributed accurately.
+                    </p>
+
+                </div>
+
+
+                <div class="recommendation">
+
+                    <strong>
+                        03 — Review product concentration
+                    </strong>
+
+                    <p>
+                        Monitor the products contributing the
+                        largest share of revenue and assess the
+                        operational risks associated with relying
+                        heavily on a small product group.
+                    </p>
+
+                </div>
+
+
+                <div class="recommendation">
+
+                    <strong>
+                        04 — Review cancellation and return patterns
+                    </strong>
+
+                    <p>
+                        Investigate the reasons behind cancelled
+                        and returned orders, particularly where
+                        these events are concentrated by product,
+                        supplier or delivery route.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             TOOLS
+        ================================================== -->
+
+        <section>
+
+            <div class="section-label">
+                TOOLS & SKILLS
+            </div>
+
+            <h2>
+                Tools used
+            </h2>
+
+
+            <div class="tools">
+
+                <span class="tool">
+                    Excel
+                </span>
+
+                <span class="tool">
+                    SQL
+                </span>
+
+                <span class="tool">
+                    Power BI
+                </span>
+
+                <span class="tool">
+                    Data Cleaning
+                </span>
+
+                <span class="tool">
+                    Data Analysis
+                </span>
+
+                <span class="tool">
+                    Data Visualization
+                </span>
+
+                <span class="tool">
+                    Business Analysis
+                </span>
+
+                <span class="tool">
+                    Data Storytelling
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             PROJECT FILES
+        ================================================== -->
+
+        <section>
+
+            <div class="section-label">
+                PROJECT FILES
+            </div>
+
+            <h2>
+                Explore the project
+            </h2>
+
+            <p>
+                The complete project documentation and supporting
+                files are available through the project repository.
+            </p>
+
+
+            <div class="project-links">
+
+                <!--
+                    GITHUB REPOSITORY
+                -->
+
+                <a
+                    href="https://github.com/joecliffayibabrakemi-debug/ApexLink-Supply-Chain"
+                    target="_blank"
+                    class="button"
+                >
+                    View on GitHub →
+                </a>
+
+
+                <!--
+                    We are NOT adding a Power BI link because
+                    you currently only have the .PBIX file.
+                -->
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             PROJECT NAVIGATION
+        ================================================== -->
+
+        <div class="project-navigation">
+
+            <a href="geoflex.html">
+                ← GeoFlex HR Analytics
+            </a>
+
+            <a href="environmental-noise.html">
+                Environmental Noise →
+            </a>
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+    <footer>
+
+        <p>
+            © 2026 Joecliff A. Wilson.
+            Built to tell the story behind the data.
+        </p>
+
+    </footer>
+
+
+</body>
+</html>

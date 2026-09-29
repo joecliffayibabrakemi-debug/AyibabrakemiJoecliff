@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GeoFlex Workforce & Attrition Analysis | Joecliff A. Wilson</title>
+
+    <meta name="description" content="GeoFlex Workforce and Attrition Analysis project by Joecliff A. Wilson.">
+
+    <style>
+
+        /* =====================================================
+           BASIC SETTINGS
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --green: #074344;
+            --green-light: #0d5555;
+            --gold: #d7a84f;
+            --background: #f7f8f6;
+            --white: #ffffff;
+            --text: #17201e;
+            --muted: #68736f;
+            --border: #dfe5e2;
+            --max-width: 1100px;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        /* =====================================================
+           NAVIGATION
+        ===================================================== */
+
+        nav {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 20px 6%;
+        }
+
+        .logo {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--green);
+        }
+
+        .back-link {
+            color: var(--green);
+            font-weight: 600;
+        }
+
+        .back-link:hover {
+            color: var(--gold);
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .project-hero {
+            max-width: var(--max-width);
+            margin: auto;
+            padding: 90px 25px 60px;
+        }
+
+        .project-category {
+            color: var(--gold);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .project-hero h1 {
+            font-size: 3.8rem;
+            line-height: 1.1;
+            color: var(--green);
+            max-width: 850px;
+            margin-bottom: 25px;
+        }
+
+        .project-intro {
+            font-size: 1.2rem;
+            color: var(--muted);
+            max-width: 780px;
+        }
+
+
+        /* =====================================================
+           MAIN CONTENT
+        ===================================================== */
+
+        .container {
+            max-width: var(--max-width);
+            margin: auto;
+            padding: 0 25px 90px;
+        }
+
+        section {
+            margin-bottom: 80px;
+        }
+
+        .section-label {
+            color: var(--gold);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: var(--green);
+            font-size: 2.1rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 18px;
+        }
+
+
+        /* =====================================================
+           PROJECT IMAGE
+        ===================================================== */
+
+        .main-project-image {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            margin: 30px 0 80px;
+        }
+
+        .main-project-image img {
+            width: 100%;
+        }
+
+        .image-caption {
+            padding: 15px 20px;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+
+        /* =====================================================
+           PROJECT OVERVIEW
+        ===================================================== */
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .overview-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 25px;
+        }
+
+        .overview-card h3 {
+            color: var(--green);
+            margin-bottom: 10px;
+        }
+
+        .overview-card p {
+            margin-bottom: 0;
+            color: var(--muted);
+        }
+
+
+        /* =====================================================
+           QUESTIONS
+        ===================================================== */
+
+        .question-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .question {
+            background: var(--white);
+            border-left: 4px solid var(--gold);
+            padding: 20px;
+        }
+
+
+        /* =====================================================
+           PROCESS
+        ===================================================== */
+
+        .process {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .process-step {
+            background: var(--green);
+            color: var(--white);
+            padding: 22px 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .process-number {
+            display: block;
+            color: var(--gold);
+            font-size: 0.8rem;
+            margin-bottom: 8px;
+        }
+
+
+        /* =====================================================
+           DASHBOARD
+        ===================================================== */
+
+        .dashboard-box {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        .dashboard-box img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .dashboard-note {
+            color: var(--muted);
+            font-size: 0.9rem;
+            margin-top: 15px;
+        }
+
+
+        /* =====================================================
+           KEY FINDINGS
+        ===================================================== */
+
+        .findings-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .finding {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 25px;
+        }
+
+        .finding-number {
+            color: var(--green);
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .finding-title {
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .finding p {
+            color: var(--muted);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+
+        /* =====================================================
+           RECOMMENDATIONS
+        ===================================================== */
+
+        .recommendations {
+            display: grid;
+            gap: 15px;
+        }
+
+        .recommendation {
+            background: var(--white);
+            border: 1px solid var(--border);
+            padding: 22px;
+            border-radius: 10px;
+        }
+
+        .recommendation strong {
+            color: var(--green);
+        }
+
+
+        /* =====================================================
+           TOOLS
+        ===================================================== */
+
+        .tools {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tool {
+            background: var(--green);
+            color: var(--white);
+            padding: 9px 15px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+        }
+
+
+        /* =====================================================
+           PROJECT LINKS
+        ===================================================== */
+
+        .project-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .button {
+            display: inline-block;
+            background: var(--green);
+            color: var(--white);
+            padding: 13px 22px;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        .button:hover {
+            background: var(--green-light);
+        }
+
+        .button.secondary {
+            background: transparent;
+            color: var(--green);
+            border: 1px solid var(--green);
+        }
+
+        .button.secondary:hover {
+            background: var(--green);
+            color: var(--white);
+        }
+
+
+        /* =====================================================
+           PROJECT NAVIGATION
+        ===================================================== */
+
+        .project-navigation {
+            border-top: 1px solid var(--border);
+            padding-top: 30px;
+
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .project-navigation a {
+            color: var(--green);
+            font-weight: 700;
+        }
+
+        .project-navigation a:hover {
+            color: var(--gold);
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            background: var(--green);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 800px) {
+
+            .project-hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .overview-grid,
+            .question-list {
+                grid-template-columns: 1fr;
+            }
+
+            .process {
+                grid-template-columns: 1fr;
+            }
+
+            .findings-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            nav {
+                padding: 18px 22px;
+            }
+
+            .project-hero {
+                padding: 65px 22px 45px;
+            }
+
+            .project-hero h1 {
+                font-size: 2.3rem;
+            }
+
+            .project-intro {
+                font-size: 1rem;
+            }
+
+            .container {
+                padding: 0 22px 60px;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .findings-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-navigation {
+                flex-direction: column;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVIGATION
+    ===================================================== -->
+
+    <nav>
+
+        <a href="../index.html" class="logo">
+            Joecliff A. Wilson
+        </a>
+
+        <a href="../index.html" class="back-link">
+            ← Back to Portfolio
+        </a>
+
+    </nav>
+
+
+
+    <!-- =====================================================
+         PROJECT HERO
+    ===================================================== -->
+
+    <header class="project-hero">
+
+        <div class="project-category">
+            HR ANALYTICS
+        </div>
+
+        <h1>
+            GeoFlex Workforce & Attrition Analysis
+        </h1>
+
+        <p class="project-intro">
+            Analysing workforce and employee attrition patterns
+            across Nigeria and Kenya to identify areas requiring
+            management attention.
+        </p>
+
+    </header>
+
+
+
+    <main class="container">
+
+
+        <!-- =================================================
+             MAIN PROJECT IMAGE
+
+             IMPORTANT:
+             Put your MAIN GeoFlex dashboard screenshot inside
+             the "images" folder.
+
+             Example filename:
+             geoflex-dashboard.jpg
+
+             Then change the src below to:
+
+             ../images/geoflex-dashboard.jpg
+        ================================================== -->
+
+        <div class="main-project-image">
+
+            <img
+                src="../images/HR.jpg"
+                alt="GeoFlex Workforce and Attrition Dashboard"
+            >
+
+            <div class="image-caption">
+                GeoFlex Workforce & Attrition Analysis dashboard.
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             PROJECT OVERVIEW
+        ================================================== -->
+
+        <section>
+
+            <div class="section-label">
+                PROJECT OVERVIEW
+            </div>
+
+            <h2>
+                Understanding workforce attrition
+            </h2>
+
+            <p>
+                This project analyses workforce and employee
+                attrition data across Nigeria and Kenya from
+                2019 to 2025.
+            </p>
+
+            <p>
+                The analysis focuses on identifying attrition
+                hotspots, workforce patterns and recruitment
+                insights that could help management understand
+                where further investigation may be required.
+            </p>
+
+
+            <div class="overview-grid">
+
+                <div class="overview-card">
+
+                    <h3>
+                        Dataset
+                    </h3>
+
+                    <p>
+                        2,500 employees across Nigeria and Kenya.
+                    </p>
+
+                </div>
+
+
+                <div class="overview-card">
+
+                    <h3>
+                        Time Period
+                    </h3>
+
+                    <p>
+                        2019–2025.
+                    </p>
+
+                </div>
+
+
+                <div class="overview-card">
+
+                    <h3>
+                        Data Sources
+                    </h3>
+
+                    <p>
+                        8 core HR datasets covering workforce,
+                        recruitment, performance and employee
+                        records.
+                    </p>
+
+                </div>
+
+
+                <div class="overview-card">
+
+                    <h3>
+                        Tools
+                    </h3>
+
+                    <p>
+                        Excel, Power Query, Power BI and DAX.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             BUSINESS QUESTIONS
+        ================================================== -->
+
+        <section>
+
+            <div class="section-label">
+                ANALYSIS QUESTIONS
+            </div>
+
+            <h2>
+                What did the analysis try to answer?
+            </h2>
+
+            <div class="question-list">
+
+                <div class="question">
+                    Where is employee attrition highest?
+                </div>
+
+                <div class="question">
+                    Which departments require attention?
+                </div>
+
+                <div class="question">
+                    Which locations have the highest attrition?
+                </div>
+
+                <div class="question">
+                    Which recruitment sources generate hires?
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             DATA CLEANING & PREPARATION
+        ================================================== -->
+
+        <section>
+
+            <div class="section-label">
+                DATA PREPARATION
+            </div>
+
+            <h2>
+                From raw data to analysis-ready data
+            </h2>
+
+            <p>
+                The project involved reviewing eight core HR
+                datasets and preparing them for analysis.
+            </p>
+
+            <p>
+                The data contained issues such as duplicate
+                records, missing values and inconsistent
+                formatting. The datasets were cleaned and
+                structured before relationships were created
+                for analysis.
+            </p>
+
+
+            <!--
+                OPTIONAL IMAGE:
+
+                If you have a screenshot showing your
+                Power Query cleaning process, put it in
+                the images folder.
+
+                Example:
+                geoflex-cleaning.jpg
+
+                Then use:
+
+                <img src="../images/geoflex-cleaning.jpg"
+                     alt="GeoFlex data cleaning process">
+            -->
+
+        </section>
+
+
+
+        <!-- =================================================
+             ANALYSIS PROCESS
+        ================================================== -->
+
+        <section>
+
+            <div class="section-label">
+                PROCESS
+            </div>
+
+            <h2>
+                How the analysis was built
+            </h2>
+
+            <div class="process">
+
+                <div class="process-step">
+
+                    <span class="process-number">
+                        01
+                    </span>
+
+                    Raw Data
+
+                </div>
+
+
+                <div class="process-step">
+
+                    <span class="process-number">
+                        02
+                    </span>
+
+                    Data Cleaning
+
+                </div>
+
+
+                <div class="process-step">
+
+                    <span class="process-number">
+                        03
+                    </span>
+
+                    Data Modeling
+
+                </div>
+
+
+                <div class="process-step">
+
+                    <span class="process-number">
+                        04
+                    </span>
+
+                    Analysis
+
+                </div>
+
+
+                <div class="process-step">
+
+                    <span class="process-number">
+                        05
+                    </span>
+
+                    Insights
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             DASHBOARD
+        ================================================== -->
+
+        <section>
+
+            <div class="section-label">
+                DASHBOARD
+            </div>
+
+            <h2>
+                Workforce & Attrition Dashboard
+            </h2>
+
+            <p>
+                The Power BI dashboard brings the analysis
+                together to help identify workforce patterns
+                across countries, departments and locations.
+            </p>
+
+
+            <!--
+                =================================================
+                DASHBOARD IMAGE
+
+                THIS IS WHERE YOU PUT YOUR ACTUAL POWER BI
+                DASHBOARD SCREENSHOT.
+
+                Example filename:
+
+                geoflex-dashboard.jpg
+
+                Put the image inside:
+
+                images/geoflex-dashboard.jpg
+
+                Then replace the image below with:
+
+                <img src="../images/geoflex-dashboard.jpg"
+                     alt="GeoFlex Power BI dashboard">
+                =================================================
+            -->
+
+            <div class="dashboard-box">
+
+                <img
+                    src="../images/HR.jpg"
+                    alt="GeoFlex Power BI dashboard"
+                >
+
+                <p class="dashboard-note">
+                    Dashboard preview. Replace this image with
+                    your final GeoFlex Power BI dashboard screenshot.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             KEY FINDINGS
+        ================================================== -->
+
+        <section>
+
+            <div class="section-label">
+                KEY FINDINGS
+            </div>
+
+            <h2>
+                What the analysis revealed
+            </h2>
+
+
+            <div class="findings-grid">
+
+
+                <div class="finding">
+
+                    <div class="finding-number">
+                        14.48%
+                    </div>
+
+                    <div class="finding-title">
+                        Overall Attrition
+                    </div>
+
+                    <p>
+                        Overall employee attrition across the
+                        analysed workforce.
+                    </p>
+
+                </div>
+
+
+                <div class="finding">
+
+                    <div class="finding-number">
+                        18.3%
+                    </div>
+
+                    <div class="finding-title">
+                        Customer Service
+                    </div>
+
+                    <p>
+                        Customer Service recorded the highest
+                        departmental attrition.
+                    </p>
+
+                </div>
+
+
+                <div class="finding">
+
+                    <div class="finding-number">
+                        23.1%
+                    </div>
+
+                    <div class="finding-title">
+                        Busia
+                    </div>
+
+                    <p>
+                        Busia recorded higher attrition than
+                        Ilorin at 7.4%.
+                    </p>
+
+                </div>
+
+
+                <div class="finding">
+
+                    <div class="finding-number">
+                        16.3%
+                    </div>
+
+                    <div class="finding-title">
+                        Hired Rate
+                    </div>
+
+                    <p>
+                        Overall hired rate across the recruitment
+                        analysis.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             RECOMMENDATIONS
+        ================================================== -->
+
+        <section>
+
+            <div class="section-label">
+                RECOMMENDATIONS
+            </div>
+
+            <h2>
+                What could management investigate next?
+            </h2>
+
+
+            <div class="recommendations">
+
+                <div class="recommendation">
+
+                    <strong>
+                        01 — Investigate attrition hotspots
+                    </strong>
+
+                    <p>
+                        Review the drivers behind higher attrition
+                        in locations and departments with elevated
+                        employee exits.
+                    </p>
+
+                </div>
+
+
+                <div class="recommendation">
+
+                    <strong>
+                        02 — Examine early-tenure exits
+                    </strong>
+
+                    <p>
+                        Investigate the employee experience during
+                        the first few years, where a notable share
+                        of exits occurred.
+                    </p>
+
+                </div>
+
+
+                <div class="recommendation">
+
+                    <strong>
+                        03 — Review recruitment channels
+                    </strong>
+
+                    <p>
+                        Compare recruitment sources and their
+                        contribution to successful hires to support
+                        future recruitment planning.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             TOOLS
+        ================================================== -->
+
+        <section>
+
+            <div class="section-label">
+                TOOLS & SKILLS
+            </div>
+
+            <h2>
+                Tools used
+            </h2>
+
+
+            <div class="tools">
+
+                <span class="tool">
+                    Excel
+                </span>
+
+                <span class="tool">
+                    Power Query
+                </span>
+
+                <span class="tool">
+                    Power BI
+                </span>
+
+                <span class="tool">
+                    DAX
+                </span>
+
+                <span class="tool">
+                    Data Cleaning
+                </span>
+
+                <span class="tool">
+                    Data Modeling
+                </span>
+
+                <span class="tool">
+                    Data Visualization
+                </span>
+
+                <span class="tool">
+                    Data Storytelling
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             PROJECT FILES & LINKS
+        ================================================== -->
+
+        <section>
+
+            <div class="section-label">
+                PROJECT FILES
+            </div>
+
+            <h2>
+                Explore the project
+            </h2>
+
+            <p>
+                View the project files, dashboard and supporting
+                materials through the links below.
+            </p>
+
+
+            <div class="project-links">
+
+                <!--
+                    GITHUB LINK
+
+                    Replace # with your actual GeoFlex
+                    GitHub repository URL.
+                -->
+
+                <a
+                    href="https://github.com/joecliffayibabrakemi-debug/HR-Workforce-Attrition-Analysis-Geoflex-Workforce-Solutions"
+                    target="_blank"
+                    class="button"
+                >
+                    View on GitHub →
+                </a>
+
+
+                <!--
+                    POWER BI LINK
+
+                    When you publish your Power BI report,
+                    replace # with the public Power BI URL.
+
+                    Example:
+
+                    href="YOUR_POWER_BI_LINK"
+                -->
+
+                                <!--
+                    POWER BI FILE
+
+                    You currently only have the .PBIX file.
+                    That is okay.
+
+                    We will NOT use a fake Power BI link.
+
+                    For now, this button is removed.
+                    Your dashboard will be shown as screenshots
+                    on this project page.
+                -->
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             PROJECT NAVIGATION
+        ================================================== -->
+
+        <div class="project-navigation">
+
+            <!--
+                PREVIOUS PROJECT
+
+                This will work after we create:
+                environmental-noise.html
+            -->
+
+            <a href="environmental-noise.html">
+                ← Environmental Noise
+            </a>
+
+
+            <!--
+                NEXT PROJECT
+
+                This will work after we create:
+                apexlink.html
+            -->
+
+            <a href="apexlink.html">
+                ApexLink Supply Chain →
+            </a>
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+    <footer>
+
+        <p>
+            © 2026 Joecliff A. Wilson.
+            Built to tell the story behind the data.
+        </p>
+
+    </footer>
+
+
+</body>
+</html>

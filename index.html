@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Ayibabrakemi W. Joecliff | Data Analyst</title>
+
+    <meta name="description"
+          content="Joecliff A. Wilson — Data Analyst focused on data analysis, cleaning, visualization, reporting and data storytelling.">
+
+
+    <!-- ==============================
+         WEBSITE DESIGN
+    =============================== -->
+
+    <style>
+
+        /* ------------------------------
+           BASIC RESET
+        ------------------------------ */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f8f6;
+            color: #17201e;
+            line-height: 1.6;
+        }
+
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        :root {
+            --green: #074344;
+            --green-light: #0d5555;
+            --gold: #d7a84f;
+            --background: #f7f8f6;
+            --white: #ffffff;
+            --text: #17201e;
+            --muted: #68736f;
+            --border: #dfe5e2;
+            --max-width: 1180px;
+        }
+
+
+        /* ------------------------------
+           NAVIGATION
+        ------------------------------ */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(247, 248, 246, 0.96);
+
+            border-bottom: 1px solid var(--border);
+
+            backdrop-filter: blur(10px);
+        }
+
+
+        nav {
+            max-width: var(--max-width);
+            height: 75px;
+
+            margin: auto;
+            padding: 0 30px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+
+        .logo {
+            font-size: 1.35rem;
+            font-weight: 800;
+        }
+
+
+        .logo span {
+            color: var(--gold);
+        }
+
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #3f4946;
+        }
+
+
+        .nav-links a:hover {
+            color: var(--green);
+        }
+
+
+        /* ------------------------------
+           GENERAL SECTION
+        ------------------------------ */
+
+        section {
+            max-width: var(--max-width);
+            margin: auto;
+            padding: 100px 30px;
+        }
+
+
+        .label {
+            color: var(--green-light);
+
+            font-size: 0.75rem;
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .section-title {
+            max-width: 700px;
+
+            font-size: clamp(2rem, 5vw, 3.5rem);
+
+            line-height: 1.1;
+
+            letter-spacing: -1.5px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .section-description {
+            max-width: 650px;
+
+            color: var(--muted);
+
+            font-size: 1rem;
+        }
+
+
+        /* ------------------------------
+           HERO
+        ------------------------------ */
+
+        .hero {
+            max-width: var(--max-width);
+
+            min-height: calc(100vh - 75px);
+
+            margin: auto;
+
+            padding: 80px 30px;
+
+            display: grid;
+
+            grid-template-columns: 1.1fr 0.9fr;
+
+            align-items: center;
+
+            gap: 70px;
+        }
+
+
+        .hero-label {
+            color: var(--green);
+
+            font-size: 0.8rem;
+
+            font-weight: 800;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .hero h1 {
+            font-size: clamp(3rem, 7vw, 6rem);
+
+            line-height: 0.98;
+
+            letter-spacing: -4px;
+
+            margin-bottom: 30px;
+        }
+
+
+        .hero h1 span {
+            color: var(--green);
+        }
+
+
+        .hero-description {
+            max-width: 600px;
+
+            color: var(--muted);
+
+            font-size: 1.15rem;
+
+            line-height: 1.8;
+
+            margin-bottom: 35px;
+        }
+
+
+        .buttons {
+            display: flex;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+
+            margin-bottom: 25px;
+        }
+
+
+        .button {
+            display: inline-block;
+
+            padding: 14px 24px;
+
+            font-size: 0.9rem;
+
+            font-weight: 700;
+
+            border: 1px solid var(--green);
+
+            transition: 0.25s;
+        }
+
+
+        .button-primary {
+            background: var(--green);
+
+            color: white;
+        }
+
+
+        .button-primary:hover {
+            background: #053536;
+        }
+
+
+        .button-outline {
+            color: var(--green);
+        }
+
+
+        .button-outline:hover {
+            background: var(--green);
+
+            color: white;
+        }
+
+
+        .social-links {
+            display: flex;
+
+            gap: 25px;
+        }
+
+
+        .social-links a {
+            color: var(--muted);
+
+            font-size: 0.9rem;
+
+            font-weight: 700;
+
+            border-bottom: 1px solid var(--muted);
+        }
+
+
+        .hero-photo {
+            position: relative;
+
+            max-width: 430px;
+
+            margin: auto;
+        }
+
+
+        .hero-photo::after {
+            content: "";
+
+            position: absolute;
+
+            width: 100%;
+            height: 100%;
+
+            top: 20px;
+            left: 20px;
+
+            background: var(--gold);
+
+            z-index: 0;
+        }
+
+
+        .hero-photo img {
+            position: relative;
+
+            z-index: 1;
+
+            aspect-ratio: 4 / 5;
+
+            object-fit: cover;
+        }
+
+
+        /* ------------------------------
+           ABOUT
+        ------------------------------ */
+
+        #about {
+            border-top: 1px solid var(--border);
+        }
+
+
+        .about-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 80px;
+
+            margin-top: 50px;
+        }
+
+
+        .about-text p {
+            color: var(--muted);
+
+            margin-bottom: 20px;
+
+            font-size: 1.05rem;
+        }
+
+
+        .about-points {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 25px;
+        }
+
+
+        .about-point {
+            display: grid;
+
+            grid-template-columns: 45px 1fr;
+
+            gap: 20px;
+
+            padding-bottom: 25px;
+
+            border-bottom: 1px solid var(--border);
+        }
+
+
+        .about-number {
+            color: var(--gold);
+
+            font-weight: 800;
+        }
+
+
+        .about-point h3 {
+            margin-bottom: 5px;
+        }
+
+
+        .about-point p {
+            color: var(--muted);
+        }
+
+
+        /* ------------------------------
+           SERVICES
+        ------------------------------ */
+
+        .services-section {
+            max-width: none;
+
+            background: var(--green);
+
+            color: white;
+        }
+
+
+        .services-inner {
+            max-width: var(--max-width);
+
+            margin: auto;
+
+            padding: 0 30px;
+        }
+
+
+        .services-section .label {
+            color: var(--gold);
+        }
+
+
+        .services-section .section-description {
+            color: #b8c8c5;
+        }
+
+
+        .services-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 1px;
+
+            margin-top: 50px;
+
+            background: rgba(255,255,255,0.2);
+        }
+
+
+        .service {
+            padding: 35px;
+
+            min-height: 260px;
+
+            background: var(--green);
+        }
+
+
+        .service-number {
+            color: var(--gold);
+
+            font-size: 0.8rem;
+
+            font-weight: 800;
+
+            margin-bottom: 45px;
+        }
+
+
+        .service h3 {
+            margin-bottom: 15px;
+
+            font-size: 1.3rem;
+        }
+
+
+        .service p {
+            color: #b8c8c5;
+        }
+
+
+        /* ------------------------------
+           PROJECTS
+        ------------------------------ */
+
+        #projects {
+            border-top: 1px solid var(--border);
+        }
+
+
+        .projects-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+
+            margin-top: 50px;
+        }
+
+
+        .project {
+            background: white;
+
+            border: 1px solid var(--border);
+
+            transition: 0.3s;
+        }
+
+
+        .project:hover {
+            transform: translateY(-5px);
+
+            box-shadow: 0 15px 40px rgba(7,67,68,0.08);
+        }
+
+
+        .project-image {
+            aspect-ratio: 16 / 10;
+
+            overflow: hidden;
+        }
+
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+
+        .project-content {
+            padding: 28px;
+        }
+
+
+        .project-category {
+            color: var(--green-light);
+
+            font-size: 0.7rem;
+
+            font-weight: 800;
+
+            letter-spacing: 1.5px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .project h3 {
+            font-size: 1.3rem;
+
+            line-height: 1.3;
+
+            margin-bottom: 15px;
+        }
+
+
+        .project-description {
+            color: var(--muted);
+
+            font-size: 0.94rem;
+
+            margin-bottom: 20px;
+        }
+
+
+        .tools {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 7px;
+
+            margin-bottom: 22px;
+        }
+
+
+        .tools span {
+            background: #eef2ef;
+
+            padding: 5px 9px;
+
+            font-size: 0.7rem;
+
+            font-weight: 600;
+
+            color: #46524f;
+        }
+
+
+        .project-link {
+            color: var(--green);
+
+            font-size: 0.88rem;
+
+            font-weight: 800;
+
+            border-bottom: 1px solid var(--green);
+        }
+
+
+        /* ------------------------------
+           SKILLS
+        ------------------------------ */
+
+        #skills {
+            border-top: 1px solid var(--border);
+        }
+
+
+        .skills {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+            margin-top: 45px;
+        }
+
+
+        .skill {
+            padding: 13px 18px;
+
+            background: white;
+
+            border: 1px solid var(--border);
+
+            font-size: 0.9rem;
+
+            font-weight: 600;
+        }
+
+
+        /* ------------------------------
+           CONTACT
+        ------------------------------ */
+
+        #contact {
+            border-top: 1px solid var(--border);
+        }
+
+
+        .contact-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            margin-top: 50px;
+
+            border-top: 1px solid var(--border);
+
+            border-bottom: 1px solid var(--border);
+        }
+
+
+        .contact-item {
+            padding: 30px;
+
+            border-right: 1px solid var(--border);
+        }
+
+
+        .contact-item:last-child {
+            border-right: none;
+        }
+
+
+        .contact-label {
+            display: block;
+
+            color: var(--muted);
+
+            font-size: 0.75rem;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 10px;
+        }
+
+
+        .contact-item strong {
+            color: var(--green);
+        }
+
+
+        /* ------------------------------
+           FOOTER
+        ------------------------------ */
+
+        footer {
+            max-width: var(--max-width);
+
+            margin: auto;
+
+            padding: 30px;
+
+            border-top: 1px solid var(--border);
+
+            color: var(--muted);
+
+            font-size: 0.8rem;
+        }
+
+
+        /* ------------------------------
+           MOBILE
+        ------------------------------ */
+
+        @media (max-width: 900px) {
+
+            .hero {
+                grid-template-columns: 1fr;
+
+                padding-top: 60px;
+            }
+
+
+            .hero-photo {
+                margin-left: 0;
+
+                max-width: 360px;
+            }
+
+
+            .about-grid {
+                grid-template-columns: 1fr;
+
+                gap: 50px;
+            }
+
+
+            .services-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .contact-item {
+                border-right: none;
+
+                border-bottom: 1px solid var(--border);
+            }
+
+
+            .contact-item:last-child {
+                border-bottom: none;
+            }
+
+        }
+
+
+        @media
+		 (max-width: 650px) {
+
+    nav {
+        padding: 0 22px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    section {
+        padding: 75px 22px;
+    }
+
+    .hero {
+        padding: 60px 22px 80px;
+    }
+
+    .hero h1 {
+        font-size: 3.4rem;
+        letter-spacing: -2px;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .services-inner {
+        padding: 0 22px;
+    }
+
+    .service {
+        min-height: auto;
+        padding: 30px;
+    }
+
+    .project-content {
+        padding: 25px;
+    }
+
+    footer {
+        padding: 25px 22px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ==============================
+         NAVIGATION
+    =============================== -->
+
+    <header>
+
+        <nav>
+
+            <a href="#home" class="logo">
+                Ayibabrakemi<span>.</span>
+            </a>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ==============================
+         MAIN CONTENT
+    =============================== -->
+
+    <main>
+
+
+        <!-- HERO -->
+
+        <section class="hero" id="home">
+
+            <div>
+
+                <p class="hero-label">
+                    DATA ANALYST
+                </p>
+
+                <h1>
+                    Turning data into
+                    <span>clear insights.</span>
+                </h1>
+
+                <p class="hero-description">
+                    I analyse, clean and visualize data to uncover
+                    patterns, explain what is happening and support
+                    better decisions.
+                </p>
+
+                <div class="buttons">
+
+                    <a href="#projects"
+                       class="button button-primary">
+                        View My Projects
+                    </a>
+
+                    <a href="#contact"
+                       class="button button-outline">
+                        Let's Connect
+                    </a>
+
+                </div>
+
+                <div class="social-links">
+
+                    <a href="https://github.com/joecliffayibabrakemi-debug"
+                       target="_blank">
+                        GitHub
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/joecliff-wilson"
+                       target="_blank">
+                        LinkedIn
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-photo">
+
+                <img src="images/joecliff.jpg"
+                     alt="Ayibabrakemi W. Joecliff">
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+
+        <section id="about">
+
+            <p class="label">
+                ABOUT ME
+            </p>
+
+            <h2 class="section-title">
+                Making data easier to understand.
+            </h2>
+
+            <p class="section-description">
+                I focus on turning raw data into useful insights,
+                clear reports and practical recommendations.
+            </p>
+
+
+            <div class="about-grid">
+
+
+                <div class="about-text">
+
+                    <p>
+                        I'm Joecliff A. Wilson, a Data Analyst with
+                        a background in Physics and an interest in
+                        turning data into meaningful insights.
+                    </p>
+
+                    <p>
+                        My work focuses on data cleaning, analysis,
+                        visualization and reporting. I use Excel,
+                        Power Query, Power BI and SQL to move from
+                        raw data to clear findings.
+                    </p>
+
+                    <p>
+                        My goal is not simply to create dashboards
+                        that look good. I want the analysis to explain
+                        what happened, why it matters and what could
+                        be done next.
+                    </p>
+
+                </div>
+
+
+                <div class="about-points">
+
+
+                    <div class="about-point">
+
+                        <span class="about-number">
+                            01
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Analyse
+                            </h3>
+
+                            <p>
+                                Find patterns, trends and relationships
+                                within the data.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="about-point">
+
+                        <span class="about-number">
+                            02
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Explain
+                            </h3>
+
+                            <p>
+                                Turn findings into clear stories
+                                people can understand.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="about-point">
+
+                        <span class="about-number">
+                            03
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Recommend
+                            </h3>
+
+                            <p>
+                                Connect insights to practical actions
+                                and business questions.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SERVICES -->
+
+        <section class="services-section">
+
+            <div class="services-inner">
+
+                <p class="label">
+                    WHAT I DO
+                </p>
+
+                <h2 class="section-title">
+                    From raw data to useful insight.
+                </h2>
+
+                <p class="section-description">
+                    I work across the process of preparing,
+                    analysing and communicating data.
+                </p>
+
+
+                <div class="services-grid">
+
+
+                    <div class="service">
+
+                        <p class="service-number">
+                            01
+                        </p>
+
+                        <h3>
+                            Data Analysis
+                        </h3>
+
+                        <p>
+                            Explore datasets to identify trends,
+                            patterns and relationships that answer
+                            important questions.
+                        </p>
+
+                    </div>
+
+
+                    <div class="service">
+
+                        <p class="service-number">
+                            02
+                        </p>
+
+                        <h3>
+                            Data Cleaning
+                        </h3>
+
+                        <p>
+                            Prepare raw datasets by handling
+                            duplicates, missing values and
+                            inconsistent information.
+                        </p>
+
+                    </div>
+
+
+                    <div class="service">
+
+                        <p class="service-number">
+                            03
+                        </p>
+
+                        <h3>
+                            Dashboards & Reporting
+                        </h3>
+
+                        <p>
+                            Build clear dashboards and reports
+                            that make important information easier
+                            to understand.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROJECTS -->
+
+        <section id="projects">
+
+            <p class="label">
+                SELECTED WORK
+            </p>
+
+            <h2 class="section-title">
+                Projects that show how I think with data.
+            </h2>
+
+            <p class="section-description">
+                These are self-directed portfolio projects created
+                to demonstrate my approach to data analysis,
+                cleaning, visualization and problem-solving.
+            </p>
+
+
+            <div class="projects-grid">
+
+
+                <!-- GEO FLEX -->
+
+                <article class="project">
+
+                    <div class="project-image">
+
+                        <img src="images/HR.jpg"
+                             alt="GeoFlex HR Analytics project">
+
+                    </div>
+
+
+                    <div class="project-content">
+
+                        <p class="project-category">
+                            HR ANALYTICS
+                        </p>
+
+                        <h3>
+                            GeoFlex Workforce & Attrition Analysis
+                        </h3>
+
+                        <p class="project-description">
+                            Analysed workforce and employee attrition
+                            patterns across Nigeria and Kenya to
+                            identify areas requiring management attention.
+                        </p>
+
+
+                        <div class="tools">
+
+                            <span>Excel</span>
+                            <span>Power Query</span>
+                            <span>Power BI</span>
+
+                        </div>
+
+
+                       <a href="projects/geoflex.html" class="project-link">
+                       View Project →
+                       </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- APEX LINK -->
+
+                <article class="project">
+
+                    <div class="project-image">
+
+                        <img src="images/Supply.jpg"
+                             alt="ApexLink Supply Chain project">
+
+                    </div>
+
+
+                    <div class="project-content">
+
+                        <p class="project-category">
+                            SUPPLY CHAIN
+                        </p>
+
+                        <h3>
+                            ApexLink Supply Chain Analysis
+                        </h3>
+
+                        <p class="project-description">
+                            Analysed sales, supplier performance,
+                            delivery delays and operational issues
+                            within a fictional supply-chain dataset.
+                        </p>
+
+
+                        <div class="tools">
+
+                            <span>Excel</span>
+                            <span>SQL</span>
+                            <span>Power BI</span>
+
+                        </div>
+
+
+                       <a href="projects/apexlink.html" class="project-link">
+                       View Project →
+                       </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ENVIRONMENTAL NOISE -->
+
+                <article class="project">
+
+                    <div class="project-image">
+
+                        <img src="images/Noise.jpg"
+                             alt="Environmental Noise Pollution project">
+
+                    </div>
+
+
+                    <div class="project-content">
+
+                        <p class="project-category">
+                            RESEARCH & DATA ANALYSIS
+                        </p>
+
+                        <h3>
+                            Environmental Noise Pollution Assessment
+                        </h3>
+
+                        <p class="project-description">
+                            A Physics research project measuring and
+                            analysing environmental noise levels across
+                            selected markets in Yenagoa, Bayelsa State.
+                        </p>
+
+
+                        <div class="tools">
+
+                            <span>Data Analysis</span>
+                            <span>Research</span>
+                            <span>Physics</span>
+
+                        </div>
+
+
+                       <a href="projects/environmental-noise.html" class="project-link">
+            			View Project →
+						</a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- SKILLS -->
+
+        <section id="skills">
+
+            <p class="label">
+                TOOLS & SKILLS
+            </p>
+
+            <h2 class="section-title">
+                Tools I use to work with data.
+            </h2>
+
+
+            <div class="skills">
+
+                <span class="skill">Excel</span>
+
+                <span class="skill">Power Query</span>
+
+                <span class="skill">Power BI</span>
+
+                <span class="skill">DAX</span>
+
+                <span class="skill">SQL</span>
+
+                <span class="skill">Data Cleaning</span>
+
+                <span class="skill">Data Modeling</span>
+
+                <span class="skill">Data Visualization</span>
+
+                <span class="skill">Business Analysis</span>
+
+                <span class="skill">Data Storytelling</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACT -->
+
+        <section id="contact">
+
+            <p class="label">
+                CONTACT
+            </p>
+
+            <h2 class="section-title">
+                Let's talk about data.
+            </h2>
+
+            <p class="section-description">
+                I'm open to junior and entry-level Data Analyst
+                opportunities and data-related projects.
+            </p>
+
+
+            <div class="contact-grid">
+
+
+                <a href="mailto:joecliffwilson@gmail.com"
+                   class="contact-item">
+
+                    <span class="contact-label">
+                        Email
+                    </span>
+
+                    <strong>
+                        Get in touch →
+                    </strong>
+
+                </a>
+
+
+                <a href="https://www.linkedin.com/in/joecliff-wilson"
+                   target="_blank"
+                   class="contact-item">
+
+                    <span class="contact-label">
+                        LinkedIn
+                    </span>
+
+                    <strong>
+                        Connect with me →
+                    </strong>
+
+                </a>
+
+
+                <a href="https://github.com/joecliffayibabrakemi-debug"
+                   target="_blank"
+                   class="contact-item">
+
+                    <span class="contact-label">
+                        GitHub
+                    </span>
+
+                    <strong>
+                        View my work →
+                    </strong>
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Joecliff A. Wilson.
+            Built to tell the story behind the data.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
